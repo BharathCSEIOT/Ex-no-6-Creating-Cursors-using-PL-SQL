@@ -24,7 +24,6 @@ select * from employd;
 INSERT INTO employd VALUES (1, 'John Doe', 'Sales', 100000);
 INSERT INTO employd VALUES (2, 'Jane Doe', 'Marketing', 120000);
 ```
-### Create employee table
 
 ### PLSQL Cursor code
 ```
