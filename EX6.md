@@ -53,7 +53,8 @@ BEGIN
 END;
 ```
 ### Output:
-![image](https://github.com/BharathCSEIOT/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/122793480/de3e77b5-d9b5-4eea-9bd2-28b9098f36d3)
+![image](https://github.com/BharathCSEIOT/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/122793480/88491e88-0360-46ce-9f88-6b8aa4b191c7)
+
 
 ### Result:
 The Program has been implemented successfully.
