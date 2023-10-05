@@ -53,7 +53,8 @@ BEGIN
 END;
 ```
 ### Output:
-![image](https://github.com/BharathCSEIOT/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/122793480/88491e88-0360-46ce-9f88-6b8aa4b191c7)
+![image](https://github.com/BharathCSEIOT/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/122793480/1a8a93be-cae2-41fa-953a-cbe98de6c0ef)
+
 
 
 ### Result:
