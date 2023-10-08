@@ -13,47 +13,43 @@
 NAME: BHARATH K
 Reg.no: 212222110006
 ```
+## Create employee table
 ```
-CREATE TABLE employd (
-  empid NUMBER,
-  empname VARCHAR(10),
-  dept VARCHAR(10),
-  salary NUMBER
-);
-select * from employd;
-INSERT INTO employd VALUES (1, 'John Doe', 'Sales', 100000);
-INSERT INTO employd VALUES (2, 'Jane Doe', 'Marketing', 120000);
+create table employee1(empid NUMBER, empname VARCHAR(10), dept VARCHAR(10),salary NUMBER);
+insert into employee1 values(1,'Chozhan','HR',50000);
+insert into employee1 values(2,'Joseph','IT',65000);
+insert into employee1 values(3,'Bharath','Finance',55000);
 ```
-
 ### PLSQL Cursor code
+
 ```
-DECLARE
-   CURSOR employd_cursor IS
-   SELECT empid,empname,dept,salary
-   FROM employd;
-   emp_id NUMBER;
-   emp_name VARCHAR(50);
-   emp_dept VARCHAR(50);
-   emp_salary NUMBER;
-BEGIN
-  OPEN employd_cursor;
+set serveroutput on 
+declare
+cursor employee1_cursor is
+select empid,empname,dept,salary
+from employee1;
+empid number;
+empname varchar(90);
+dept varchar(90);
+salary number;
+begin
+open employee1_cursor;
+loop
+fetch employee1_cursor into empid,empname,dept,salary;
+exit when employee1_cursor%notfound;
+dbms_output.put_line('Employee ID: '||empid);
+dbms_output.put_line('Employee Name: '||empname);
+dbms_output.put_line('Department: '||dept);
+dbms_output.put_line('Salary: '||salary);
+dbms_output.put_line('------------------------');
+end loop;
+close employee1_cursor;
+end;
+/
 
-  LOOP
-    FETCH employd_cursor INTO emp_id, emp_name, emp_dept, emp_salary;
-
-    EXIT WHEN employd_cursor%NOTFOUND;
-
-    DBMS_OUTPUT.PUT_LINE('Employee ID: ' || emp_id);
-    DBMS_OUTPUT.PUT_LINE('Employee Name: ' || emp_name);
-    DBMS_OUTPUT.PUT_LINE('Department: ' || emp_dept);
-    DBMS_OUTPUT.PUT_LINE('Salary: ' || emp_salary);
-  END LOOP;
-
-  CLOSE employd_cursor;
-END;
 ```
 ### Output:
-![image](https://github.com/BharathCSEIOT/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/122793480/1a8a93be-cae2-41fa-953a-cbe98de6c0ef)
+![image](https://github.com/BharathCSEIOT/Ex-no-6-Creating-Cursors-using-PL-SQL/assets/122793480/e215ad58-aca1-4682-8215-f57d2edeb2d1)
 
 
 
